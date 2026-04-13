@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <!-- Центральная направляющая (как пунктирная линия на скриншоте) -->
     <androidx.constraintlayout.widget.Guideline
@@ -61,6 +61,7 @@
     <!-- Поле ввода: Name -->
     <EditText
         android:id="@+id/et_name"
+        android:tag="name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -76,6 +77,7 @@
     <!-- Поле ввода: Password -->
     <EditText
         android:id="@+id/et_password"
+        android:tag="password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
