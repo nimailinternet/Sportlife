@@ -10,12 +10,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.sportlife.AndroidBackGround.CallBackHandler;
-import com.example.sportlife.AndroidBackGround.MethodController;
+import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.AuthServiceImpl;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.CallBackHandlerImpl;
 import com.example.sportlife.R;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import lombok.RequiredArgsConstructor;
@@ -35,15 +37,15 @@ public class MainActivity extends AppCompatActivity {
         appCompatButton = findViewById(R.id.btn_register);
         editTextName = findViewById(R.id.et_name);
         editTextPassword = findViewById(R.id.et_password);
-        Map<String,String> tags=new LinkedHashMap<>();
-        tags.put(editTextName.getTag().toString(),editTextName.getText().toString());
-        tags.put(editTextPassword.getTag().toString(),editTextPassword.getText().toString());
+        List<EditText> editTexts=new ArrayList<>();
+        editTexts.add(editTextPassword);
+        editTexts.add(editTextName);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        MethodController methodController = new MethodController(this);
-        appCompatButton.setOnClickListener(v -> authServiceImpl.auth(tags, new CallBackHandler()));
+        UIController uiController=new UIController(this,editTexts);
+        appCompatButton.setOnClickListener(v -> authServiceImpl.auth(editTextName.getText().toString(),editTextPassword.getText().toString(), new CallBackHandlerImpl(uiController)));
     }
 }

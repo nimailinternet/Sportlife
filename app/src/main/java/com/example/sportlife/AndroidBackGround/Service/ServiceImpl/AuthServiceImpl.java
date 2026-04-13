@@ -1,9 +1,10 @@
 package com.example.sportlife.AndroidBackGround.Service.ServiceImpl;
 
-import com.example.sportlife.AndroidBackGround.MethodController;
-import com.example.sportlife.AndroidBackGround.CallBackHandler;
-import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
+import com.example.sportlife.Activity.ActivityLogin;
+import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Dto.Request.AuthRequest;
+import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
+import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
 import com.example.sportlife.AndroidBackGround.Dto.Response.AuthResponse;
 
@@ -18,32 +19,29 @@ import retrofit2.Response;
 @RequiredArgsConstructor
 public class AuthServiceImpl {
     private final ApiRepository apiRepository;
-    private final MethodController methodController;
-    public void auth(Map<String,String> tags, CallBackHandler callback){
-        AuthRequest authRequest=new AuthRequest(tags.get("name"),tags.get("password"));
+    private final ErrorController errorController;
+    public void auth(String name,String password, CallBackHandler callback){
+        AuthRequest authRequest=new AuthRequest(name,password);
         apiRepository.auth(authRequest).enqueue(new retrofit2.Callback<AuthResponse>() {
             @Override
             public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
                 if(response.isSuccessful()&&response.body()!=null){
                     String token=response.body().getToken();
-                    callback.onSuccess();
+                    callback.onSuccess(ActivityLogin.class);
                 }else{
                     ErrorResponse errorResponse= null;
                     try {
-                        errorResponse = methodController.parseError(response);
+                        errorResponse = errorController.parseError(response);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    callback.onError(tags,errorResponse);
+                    callback.onError(errorResponse);
                 }
             }
 
             @Override
             public void onFailure(Call<AuthResponse> call, Throwable t) {
-                Map<String,Object> errors=new LinkedHashMap<>();
-                errors.put("message",t.getMessage());
-                ErrorResponse error=new ErrorResponse("500",errors);
-                callback.onError(tags,error);
+                callback.onNetworkError(t);
             }
         });
     }

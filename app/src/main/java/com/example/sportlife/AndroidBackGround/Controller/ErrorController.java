@@ -1,6 +1,4 @@
-package com.example.sportlife.AndroidBackGround;
-
-import android.app.Activity;
+package com.example.sportlife.AndroidBackGround.Controller;
 
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
 import com.google.gson.Gson;
@@ -8,11 +6,9 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.Map;
 
-import lombok.RequiredArgsConstructor;
 import retrofit2.Response;
-@RequiredArgsConstructor
-public class MethodController {
-    private final Activity activity;
+
+public class ErrorController {
     public ErrorResponse parseError(Response<?> response) throws IOException {
         try {
             if (response.errorBody() == null) {
@@ -26,13 +22,5 @@ public class MethodController {
             return null;
         }
 
-    }
-    public void ErrorAdvice(Map<String,String> tags, ErrorResponse error){
-        editTexts.stream().map(e->{
-            Map<String,String> errors=(Map<String,String>)error.getErrors().get("errors");
-            String tag=e.getTag().toString();
-            e.setError(errors != null ? errors.get(tag) : null);
-            return null;
-        });
     }
 }
