@@ -1,6 +1,5 @@
 package com.example.sportlife.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -17,14 +16,13 @@ import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
 import com.example.sportlife.AndroidBackGround.Client.RetrofitClient;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.AuthServiceImpl;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.CallBackHandlerImpl;
+import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.AuthService;
+import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.R;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import lombok.RequiredArgsConstructor;
 
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextView noneAcount;
 
     private ApiRepository apiRepository;
-    private AuthServiceImpl authServiceImpl;
+    private AuthService authService;
     private ErrorController errorController;
 
     @Override
@@ -57,23 +55,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         noneAcount = findViewById(R.id.none_account);
-        noneAcount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-
         UIController uiController=new UIController(this,editTexts);
         errorController =new ErrorController();
         apiRepository = RetrofitClient.getApiRepository();
-        authServiceImpl=new AuthServiceImpl(apiRepository,errorController);
-        appCompatButton.setOnClickListener(v -> authServiceImpl.auth(editTextName.getText().toString(),editTextPassword.getText().toString(), new CallBackHandlerImpl(uiController)));
+        authService =new AuthService(apiRepository,errorController);
+        CallBackHandler callBack=new CallBackHandlerImpl(uiController);
+        noneAcount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callBack.onSuccess(ActivityLogin.class);
+            }
+        });
+        appCompatButton.setOnClickListener(v -> authService.auth(editTextName.getText().toString(),editTextPassword.getText().toString(),callBack));
 
 
     }
