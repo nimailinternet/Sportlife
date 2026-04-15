@@ -1,12 +1,9 @@
-package com.example.sportlife.AndroidBackGround.Service.ServiceImpl;
+package com.example.sportlife.AndroidBackGround.Service;
 
 import android.app.Activity;
 
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
-import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
-
-import java.util.Map;
 
 import lombok.RequiredArgsConstructor;
 
