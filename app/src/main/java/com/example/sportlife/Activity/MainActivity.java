@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextName;
     EditText editTextPassword;
     TextView noneAcount;
+    TextView check;
 
     private ApiRepository apiRepository;
     private AuthService authService;
