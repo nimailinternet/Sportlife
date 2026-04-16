@@ -25,8 +25,10 @@ public class AuthService {
             @Override
             public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
                 if(response.isSuccessful()&&response.body()!=null){
-                    String token=response.body().getToken();
-                    SecurityContext.createContext().setToken(token);
+                    String token=response.body().getTokenAccess();
+                    String tokenRefresh=response.body().getTokenRefresh();
+                    SecurityContext.createContext().setTokenAccess(token);
+                    SecurityContext.createContext().setTokenRefresh(tokenRefresh);
                     callback.onSuccess(ActivityLogin.class);
                 }else{
                     ErrorResponse errorResponse;

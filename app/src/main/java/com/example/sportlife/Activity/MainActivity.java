@@ -1,5 +1,6 @@
 package com.example.sportlife.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,31 +17,38 @@ import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
 import com.example.sportlife.AndroidBackGround.Client.RetrofitClient;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
+import com.example.sportlife.AndroidBackGround.Security.SecurityContext;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.AuthService;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.ValidService;
 import com.example.sportlife.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
 public class MainActivity extends AppCompatActivity {
     AppCompatButton appCompatButton;
     EditText editTextName;
     EditText editTextPassword;
     TextView noneAcount;
-    TextView check;
 
-    private ApiRepository apiRepository;
-    private AuthService authService;
-    private ErrorController errorController;
+    private  ApiRepository apiRepository;
+    private  AuthService authService;
+    private  ErrorController errorController;
+    private  ValidService validService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String refresh = SecurityContext.createContext().getTokenRefresh();
+        if(refresh!=null&&validService.valid(refresh,"Refresh")){
+            Intent intent=new Intent(this, ActivityLogin.class);
+            this.startActivity(intent);
+            this.finish();
+            return;
+        }
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         appCompatButton = findViewById(R.id.btn_login);
