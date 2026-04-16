@@ -12,7 +12,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class UIController {
+public  class UIController {
     private final Activity activity;
     private final List<EditText> editTexts;
     public void openNextScreen(Class<? extends Activity> to){
@@ -25,7 +25,6 @@ public class UIController {
         editTexts.forEach(e->e.setError(error.getErrors().get(e.getTag().toString()).toString()));
     }
     public void ErrorService(String message){
-        System.out.println(message);
         Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
     }
 }

@@ -1,13 +1,9 @@
 package com.example.sportlife.AndroidBackGround.Service.ServiceImpl;
 
-import android.app.Activity;
-
 import com.example.sportlife.Activity.ActivityLogin;
 import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
-import com.example.sportlife.AndroidBackGround.Client.RetrofitClient;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Dto.Request.RegistrationRequest;
-import com.example.sportlife.AndroidBackGround.Dto.Response.AuthResponse;
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
 import com.example.sportlife.AndroidBackGround.Dto.Response.RegistrationResponse;
 import com.example.sportlife.AndroidBackGround.Security.SecurityContext;
@@ -29,8 +25,10 @@ public class RegistrationService {
             @Override
             public void onResponse(Call<RegistrationResponse> call, Response<RegistrationResponse> response) {
                 if(response.isSuccessful()&&response.body()!=null){
-                    String token=response.body().getToken();
-                    SecurityContext.createContext().setToken(token);
+                    String tokenAccess =response.body().getTokenAccess();
+                    String tokenRefresh=response.body().getTokenRefresh();
+                    SecurityContext.createContext().setTokenAccess(tokenAccess);
+                    SecurityContext.createContext().setTokenRefresh(tokenRefresh);
                     callBack.onSuccess(ActivityLogin.class);
                 }else{
                     ErrorResponse errorResponse;

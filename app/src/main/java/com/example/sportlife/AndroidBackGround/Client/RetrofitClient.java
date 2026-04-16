@@ -1,6 +1,7 @@
 package com.example.sportlife.AndroidBackGround.Client;
 
 import com.example.sportlife.AndroidBackGround.Security.SecurityInterceptor;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.RefreshService;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
