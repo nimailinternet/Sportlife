@@ -9,7 +9,7 @@ import java.util.Map;
 import retrofit2.Response;
 
 public class ErrorController {
-    public ErrorResponse parseError(Response<?> response) throws IOException {
+    public ErrorResponse parseError(Response<?> response){
         try {
             if (response.errorBody() == null) {
                 return null;
