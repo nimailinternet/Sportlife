@@ -32,11 +32,7 @@ public class AuthService {
                     callback.onSuccess(ActivityLogin.class);
                 }else{
                     ErrorResponse errorResponse;
-                    try {
-                        errorResponse = errorController.parseError(response);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
+                    errorResponse = errorController.parseError(response);
                     callback.onError(errorResponse);
                 }
             }
