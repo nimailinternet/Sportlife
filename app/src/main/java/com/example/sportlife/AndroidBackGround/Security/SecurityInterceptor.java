@@ -19,8 +19,15 @@ public class SecurityInterceptor implements Interceptor {
     @NonNull
     @Override
     public Response intercept(@NonNull Chain chain) throws IOException {
+        Request request= chain.request();
+        String path = request.url().encodedPath();
+        if (path.contains("/auth")
+                || path.contains("/refresh")
+                || path.contains("/register")){
+            return chain.proceed(request);
+        }
         String token=SecurityContext.createContext().getTokenAccess();
-        Request request=chain.request().newBuilder().addHeader("Authorization","Bearer "+token).build();
+        request=chain.request().newBuilder().addHeader("Authorization","Bearer "+token).build();
         return chain.proceed(request);
     }
 }

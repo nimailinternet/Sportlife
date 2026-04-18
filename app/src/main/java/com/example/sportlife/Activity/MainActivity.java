@@ -21,29 +21,26 @@ import com.example.sportlife.AndroidBackGround.Security.SecurityContext;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.AuthService;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.ValidService;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.ValidatedService;
 import com.example.sportlife.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.RequiredArgsConstructor;
 public class MainActivity extends AppCompatActivity {
     AppCompatButton appCompatButton;
     EditText editTextName;
     EditText editTextPassword;
     TextView noneAcount;
 
-    private  ApiRepository apiRepository;
     private  AuthService authService;
-    private  ErrorController errorController;
-    private  ValidService validService;
+    private ValidatedService validatedService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String refresh = SecurityContext.createContext().getTokenRefresh();
-        if(refresh!=null&&validService.valid(refresh,"Refresh")){
+        if(refresh!=null&&validatedService.validated(refresh)){
             Intent intent=new Intent(this, ActivityLogin.class);
             this.startActivity(intent);
             this.finish();
@@ -66,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         });
         noneAcount = findViewById(R.id.none_account);
         UIController uiController=new UIController(this,editTexts);
-        errorController =new ErrorController();
-        apiRepository = RetrofitClient.getApiRepository();
-        authService =new AuthService(apiRepository,errorController);
+        ErrorController errorController = new ErrorController();
+        ApiRepository apiRepository = RetrofitClient.getApiRepository();
+        authService =new AuthService(apiRepository, errorController);
         CallBackHandler callBack=new CallBackHandlerImpl(uiController);
         noneAcount.setOnClickListener(new View.OnClickListener() {
             @Override
