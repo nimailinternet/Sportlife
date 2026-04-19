@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
         noneAcount = findViewById(R.id.none_account);
         UIController uiController=new UIController(this,editTexts);
         ErrorController errorController = new ErrorController();
