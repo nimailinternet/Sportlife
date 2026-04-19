@@ -9,7 +9,6 @@ public class SecurityContext {
     private static String tokenAccess;
     private static String tokenRefresh;
     private static SecurityContext context;
-    private static RefreshService refreshService;
     public static SecurityContext createContext() {
         if(context==null){
             context=new SecurityContext();
