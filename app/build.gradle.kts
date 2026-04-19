@@ -48,5 +48,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     annotationProcessor("org.projectlombok:lombok:1.18.34")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
 }
