@@ -20,6 +20,6 @@ public class ActivityHome extends AppCompatActivity {
         UIController uiController=new UIController(this,null);
         CallBackHandler callBack=new CallBackHandlerImpl(uiController);
         findTopService.findTop(callBack);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_top);
     }
 }
