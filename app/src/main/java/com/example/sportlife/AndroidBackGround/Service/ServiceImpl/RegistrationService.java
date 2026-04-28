@@ -38,7 +38,7 @@ public class RegistrationService {
             }
             @Override
             public void onFailure(Call<RegistrationResponse> call, Throwable t) {
-                callBack.onNetworkError(t);
+                callBack.onNetworkError(t.getMessage());
             }
         });
     ;}

@@ -26,23 +26,22 @@ import java.util.List;
 
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-public class ActivityLogin extends AppCompatActivity {
-    private RegistrationService registrationService;
-    private EditText editTextName;
-    private EditText editTextPassword;
-
+public class ActivityLogin extends CreateActivity {
+    @Override
+    protected int getIdLayout(){
+        return R.layout.activity_login;
+    }
+    @Override
+    protected int getIdView(){
+        return R.id.activity_login;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        RegistrationService registrationService;
+        EditText editTextName;
+        EditText editTextPassword;
         TextView tv_have_account = findViewById(R.id.tv_have_account);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
         editTextName=findViewById(R.id.et_name);
         editTextPassword=findViewById(R.id.et_password);
         AppCompatButton appCompatButton = findViewById(R.id.btn_register);

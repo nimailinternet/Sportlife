@@ -36,7 +36,7 @@ public class RefreshService{
                 tokenAccess = responseCall.body().getTokenAccess();
             }
         } catch (IOException e) {
-            callBack.onNetworkError(e);
+            callBack.onNetworkError(e.getMessage());
         }
         if(responseCall.body().getTokenRefresh()==null){
             callBack.onSuccess(MainActivity.class);

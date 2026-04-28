@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
+    android:id="@+id/activityTop"
     tools:context=".Activity.ActivityHome">
 
     <!-- Основной контейнер "карточки" как на скриншоте -->
@@ -91,6 +92,7 @@
                 android:layout_weight="1">
 
                 <LinearLayout
+                    android:id="@+id/linerLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
