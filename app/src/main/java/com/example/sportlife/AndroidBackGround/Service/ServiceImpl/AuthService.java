@@ -41,7 +41,7 @@ public class AuthService {
 
             @Override
             public void onFailure(Call<AuthResponse> call, Throwable t) {
-                callback.onNetworkError(t);
+                callback.onNetworkError(t.getMessage());
             }
         });
     }

@@ -17,6 +17,7 @@ public class FindTopResponse {
     public class Top{
         private String login;
         private Long activity;
+        private String experts;
         private String avatar;
     }
 }

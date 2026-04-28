@@ -20,7 +20,6 @@
             android:id="@+id/avatarIcon"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_person"
             android:contentDescription="Avatar"
             app:tint="#333333"/>
 

@@ -13,18 +13,18 @@ public class CallBackHandlerImpl implements CallBackHandler {
     private final UIController uiController;
 
     @Override
-    public void onSuccess(Class<? extends Activity> activity) {
+    public void onSuccess(Class<? extends Activity> activity) {// осуществляет переход на другой экран!
         uiController.openNextScreen(activity);
     }
 
     @Override
-    public void onError(ErrorResponse error) {
+    public void onError(ErrorResponse error) {//выводит ошибку, как красную подсветку с текстом !
         uiController.ErrorAdvice(error);
     }
 
     @Override
-    public void onNetworkError(Throwable t) {
-        uiController.ErrorService(t.getMessage());
+    public void onNetworkError(String t) {//выводит ошибку на экран!
+        uiController.errorService(t);
     }
 
     @Override

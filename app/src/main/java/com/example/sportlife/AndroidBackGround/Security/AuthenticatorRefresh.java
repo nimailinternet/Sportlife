@@ -23,13 +23,14 @@ import okhttp3.Route;
 
 @RequiredArgsConstructor
 public class AuthenticatorRefresh implements Authenticator {
-    private final RefreshService refreshService;
-    private final SessionManager session;
     @Nullable
     @Override
     public Request authenticate(@Nullable Route route, @NonNull Response response) {
-        String tokenRefresh=SecurityContext.createContext().getTokenRefresh();
+        RefreshService refreshService=new RefreshService(new CallBackHandlerImpl(null));
+        SecurityContext context=SecurityContext.createContext();
+        String tokenRefresh=context.getTokenRefresh();
         RefreshResponse refresh=refreshService.refresh(tokenRefresh);
+        SessionManager session=new SessionManager(null,context);
         session.saveToken(refresh.getTokenAccess(),refresh.getTokenRefresh());
         String tokenAccess=refresh.getTokenAccess();
         return response.request().newBuilder().addHeader("Authorization", "Bearer " + tokenAccess).build();

@@ -25,7 +25,7 @@ public class FindTopService {
             @Override
             public void onResponse(Call<FindTopResponse> call, Response<FindTopResponse> response) {
                 if(response.isSuccessful()&&response.body()!=null) {
-                    callBack.findTop(response.body());//будет выводить объекты на экран
+                    callBack.findTop(response.body());
                 }else{
                     ErrorController errorController=new ErrorController();
                     ErrorResponse errorResponse;
@@ -35,7 +35,7 @@ public class FindTopService {
             }
             @Override
             public void onFailure(Call<FindTopResponse> call, Throwable t) {
-                callBack.onNetworkError(t);
+                callBack.onNetworkError(t.getMessage());
             }
         });
     }
