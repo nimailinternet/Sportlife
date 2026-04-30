@@ -20,15 +20,15 @@ import com.example.sportlife.R;
 
 import org.jspecify.annotations.NonNull;
 
-public class ActivityHome extends CreateActivity {
+public class ActivityLevel extends CreateActivity {
     @Override
     protected int getIdLayout() {
-        return R.layout.activity_top;
+        return R.layout.activity_level;
     }
 
     @Override
     protected int getIdView() {
-        return R.id.activityTop;
+        return R.id.activityLevel;
     }
 
     @Override
@@ -38,13 +38,13 @@ public class ActivityHome extends CreateActivity {
         UIController uiController=new UIController(this,null);
         CallBackHandler callBack=new CallBackHandlerImpl(uiController);
         findTopService.findTop(callBack);
-        Button search=this.findViewById(R.id.btnSearch);
-        Button history=this.findViewById(R.id.btnHistory);
-        search.setOnClickListener(v->{
-            callBack.onSuccess(null);//активность поиска.
+        Button back=this.findViewById(R.id.btnBack);
+        Button save=this.findViewById(R.id.btnSave);
+        back.setOnClickListener(v->{
+            callBack.onSuccess(null);//назад
         });
-        history.setOnClickListener(v->{
-            callBack.onSuccess(null);//активность истории
+        save.setOnClickListener(v->{
+            callBack.onSuccess(null);//сохранить
         });
     }
 }

@@ -14,11 +14,11 @@ public class RetrofitClient {
     private static final OkHttpClient httpClient= new OkHttpClient.Builder()
             .addInterceptor(new SecurityInterceptor())
             .authenticator(new AuthenticatorRefresh())
-            .connectTimeout(60, TimeUnit.SECONDS)
+            .connectTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(3,TimeUnit.MINUTES)
             .readTimeout(3,TimeUnit.MINUTES)
             .build();
-    private static final Retrofit retrofit=new Retrofit.Builder().baseUrl("http://10.0.2.2:49182/api/").client(httpClient).addConverterFactory(GsonConverterFactory.create()).build();
+    private static final Retrofit retrofit=new Retrofit.Builder().baseUrl("https://127.0.0.1:8080/api/").client(httpClient).addConverterFactory(GsonConverterFactory.create()).build();
     public static ApiRepository getApiRepository(){
         return retrofit.create(ApiRepository.class);
     }
