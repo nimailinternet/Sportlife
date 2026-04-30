@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A1A"
+    android:id="@+id/activityMusc">
+
+
+    <!-- Шапка -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#3F3F3F">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sport - "
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="life"
+            android:textColor="#00B7B7"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Контент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#333333"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поиск: выбор мышц"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Контейнер для картинки и зон -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="16dp">
+
+            <!-- Картинка спереди -->
+            <ImageView
+                android:id="@+id/imgFront"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/front_musc"
+                android:visibility="visible"/>
+
+            <!-- Картинка сзади -->
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_musc"
+                android:visibility="gone"/>
+
+            <!-- ЗОНЫ КЛИКА (Прозрачные кнопки) -->
+            <!-- Важно: координаты (layout_marginStart/Top) нужно подбирать под вашу картинку -->
+
+            <!-- Пример зоны для Бицепса (спереди) -->
+
+            <!-- Пример зоны для Трапеции (сзади) -->
+
+            <Button
+                android:id="@+id/zone4gol"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneBiceps"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zonePress"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneKosaya"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="185dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneDeltaFront"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneGrud"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="125dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+
+            <Button
+                android:id="@+id/zoneTrapezius"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/zoneDeltaBack"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/zoneTriceps"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneIkry"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="325dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+
+            <Button
+                android:id="@+id/zoneJagodichnye"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="260dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zoneBricepsBedra"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/zone4glav"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="275dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:visibility="visible" />
+
+
+
+
+
+
+            <!-- Добавьте остальные зоны аналогично -->
+
+        </FrameLayout>
+
+        <!-- Переключатель страниц -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btnPrev"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Previous"
+                />
+
+            <TextView
+                android:id="@+id/tvPageNumber"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginHorizontal="8dp"/>
+
+            <ImageView
+                android:id="@+id/btnNext"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_media_next"
+                android:contentDescription="Next" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Подвал -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#3F3F3F">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="Назад"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#757575"
+            app:cornerRadius="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Сохранить"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#00ACC1"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+</LinearLayout>
