@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние "Выбрано" -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#4CAF50"/> <!-- Зеленый при выборе -->
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+    <!-- Состояние "Обычное" (прозрачное) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Полностью прозрачный -->
+        </shape>
+    </item>
+</selector>

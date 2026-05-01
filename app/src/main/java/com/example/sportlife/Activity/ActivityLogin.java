@@ -38,9 +38,11 @@ public class ActivityLogin extends CreateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         RegistrationService registrationService;
         EditText editTextName;
         EditText editTextPassword;
+
         TextView tv_have_account = findViewById(R.id.tv_have_account);
         editTextName=findViewById(R.id.et_name);
         editTextPassword=findViewById(R.id.et_password);
