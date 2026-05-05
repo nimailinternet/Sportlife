@@ -91,7 +91,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneDeltaFront"
                 android:layout_width="0dp"
                 android:layout_height="45dp"
@@ -101,14 +101,16 @@
                 android:padding="4dp"
                 android:text="Дельты"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneBiceps"
                 android:layout_width="77dp"
                 android:layout_height="45dp"
@@ -118,14 +120,16 @@
                 android:padding="4dp"
                 android:text="Бицепс"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.15" />
+                app:layout_constraintWidth_percent="0.15"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneGrud"
                 android:layout_width="76dp"
                 android:layout_height="45dp"
@@ -135,14 +139,16 @@
                 android:padding="4dp"
                 android:text="Грудная"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneBiceps"
-                app:layout_constraintWidth_percent="0.12" />
+                app:layout_constraintWidth_percent="0.12"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zonePress"
                 android:layout_width="63dp"
                 android:layout_height="45dp"
@@ -152,15 +158,17 @@
                 android:padding="4dp"
                 android:text="Пресс"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneDeltaFront"
-                app:layout_constraintWidth_percent="0.12" />
+                app:layout_constraintWidth_percent="0.12"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneKosaya"
                 android:layout_width="136dp"
                 android:layout_height="45dp"
@@ -169,15 +177,17 @@
                 android:padding="4dp"
                 android:text="Наружная косая"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneGrud"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zone4gol"
                 android:layout_width="122dp"
                 android:layout_height="45dp"
@@ -186,16 +196,18 @@
                 android:padding="4dp"
                 android:text="Четырёхглавая"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zonePress"
                 app:layout_constraintVertical_bias="0.524"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneTrapezius"
                 android:layout_width="91dp"
                 android:layout_height="45dp"
@@ -205,14 +217,16 @@
                 android:padding="4dp"
                 android:text="Трапеция"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.15" />
+                app:layout_constraintWidth_percent="0.15"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneDeltaBack"
                 android:layout_width="96dp"
                 android:layout_height="45dp"
@@ -222,14 +236,16 @@
                 android:padding="4dp"
                 android:text="Дельты"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.15" />
+                app:layout_constraintWidth_percent="0.15"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneTriceps"
                 android:layout_width="97dp"
                 android:layout_height="45dp"
@@ -239,14 +255,16 @@
                 android:padding="4dp"
                 android:text="Трицепс"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneDeltaBack"
-                app:layout_constraintWidth_percent="0.15" />
+                app:layout_constraintWidth_percent="0.15"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneJagodichnye"
                 android:layout_width="122dp"
                 android:layout_height="45dp"
@@ -256,14 +274,16 @@
                 android:padding="4dp"
                 android:text="Ягодичные"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneTrapezius"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneBricepsBedra"
                 android:layout_width="120dp"
                 android:layout_height="45dp"
@@ -273,14 +293,16 @@
                 android:padding="4dp"
                 android:text="Бицепс бедра"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneTriceps"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zone4glav"
                 android:layout_width="137dp"
                 android:layout_height="45dp"
@@ -289,16 +311,18 @@
                 android:padding="4dp"
                 android:text="Четырёхглавая"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneJagodichnye"
                 app:layout_constraintVertical_bias="0.575"
-                app:layout_constraintWidth_percent="0.18" />
+                app:layout_constraintWidth_percent="0.18"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneIkry"
                 android:layout_width="81dp"
                 android:layout_height="45dp"
@@ -307,14 +331,16 @@
                 android:padding="4dp"
                 android:text="Икры"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneBricepsBedra"
                 app:layout_constraintVertical_bias="0.43"
-                app:layout_constraintWidth_percent="0.12" />
+                app:layout_constraintWidth_percent="0.12"
+                app:backgroundTint="@null"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

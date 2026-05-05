@@ -5,9 +5,9 @@
         <shape android:shape="rectangle">
             <stroke
                 android:width="3dp"
-                android:color="#4CAF50"/> <!-- Зеленая рамка -->
+                android:color="#00ACC1"/> <!-- Бирюзовая рамка -->
             <corners android:radius="8dp"/>
-            <solid android:color="#404CAF50"/> <!-- Полупрозрачный зеленый фон -->
+            <solid android:color="#4000ACC1"/> <!-- Полупрозрачный бирюзовый фон -->
         </shape>
     </item>
     <!-- Состояние "Обычное" -->
@@ -15,7 +15,7 @@
         <shape android:shape="rectangle">
             <stroke
                 android:width="2dp"
-                android:color="#FF5722"/> <!-- Оранжевая рамка -->
+                android:color="#80DEEA"/> <!-- Светло-голубая рамка -->
             <corners android:radius="8dp"/>
             <solid android:color="#00000000"/> <!-- Прозрачный -->
         </shape>
