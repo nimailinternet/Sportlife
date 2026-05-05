@@ -112,6 +112,7 @@ public class ActivityMuscle extends CreateActivity {
 
 
     private void showZonesForPage(int page) {
+        // Зоны ПЕРЕДНЕЙ части
         findViewById(R.id.zoneBiceps).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneDeltaFront).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneGrud).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
@@ -119,7 +120,7 @@ public class ActivityMuscle extends CreateActivity {
         findViewById(R.id.zoneKosaya).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zone4gol).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
 
-
+        // Зоны ЗАДНЕЙ части
         findViewById(R.id.zoneTrapezius).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneDeltaBack).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneTriceps).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
