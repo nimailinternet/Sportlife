@@ -100,8 +100,6 @@ public class ActivityMusc extends CreateActivity {
                 boolean isSelected = !zoneButton.isSelected();
                 zoneButton.setSelected(isSelected);
 
-                // Можно добавить логирование или сохранение
-                // Например: selectedMuscles.put(getMuscleName(buttonId), isSelected);
             });
         }
     }
