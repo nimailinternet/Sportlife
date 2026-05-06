@@ -18,15 +18,20 @@ import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FindTopService;
+import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.SearchService;
 import com.example.sportlife.R;
 
 import org.jspecify.annotations.NonNull;
+
+import java.util.List;
 
 public class ActivityMuscle extends CreateActivity {
 
     ImageView imgFront, imgBack;
     TextView tvPageNumber;
     int currentPage = 1;
+    SearchService service;
+    List<String> muscle;
 
     @Override
     protected int getIdLayout() {
@@ -48,11 +53,8 @@ public class ActivityMuscle extends CreateActivity {
         imgBack = findViewById(R.id.imgBack);
         tvPageNumber = findViewById(R.id.tvPageNumber);
 
-
-        FindTopService findTopService=new FindTopService();
         UIController uiController=new UIController(this,null);
         CallBackHandler callBack=new CallBackHandlerImpl(uiController);
-        findTopService.findTop(callBack);
 
 
         findViewById(R.id.btnPrev).setOnClickListener(v -> switchPage(-1));
@@ -63,9 +65,10 @@ public class ActivityMuscle extends CreateActivity {
         Button save=this.findViewById(R.id.btnSave);
 
         back.setOnClickListener(v->{
-            callBack.onSuccess(null);//назад
+            callBack.onSuccess(ActivityLevel.class);//назад
         });
         save.setOnClickListener(v->{
+            service.setMuscles(muscle);
             callBack.onSuccess(null);//сохранить
         });
 
@@ -97,6 +100,7 @@ public class ActivityMuscle extends CreateActivity {
         if (zoneButton != null) {
             zoneButton.setOnClickListener(v -> {
                 // Переключаем состояние кнопки
+                muscle.add(zoneButton.getText().toString());
                 boolean isSelected = !zoneButton.isSelected();
                 zoneButton.setSelected(isSelected);
 
