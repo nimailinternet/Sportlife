@@ -122,8 +122,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewTop"
-                    android:layout_width="472dp"
-                    android:layout_height="598dp"
+                    android:layout_width="426dp"
+                    android:layout_height="592dp"
                     android:nestedScrollingEnabled="false" />
 
             </LinearLayout>
