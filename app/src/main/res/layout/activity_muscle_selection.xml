@@ -76,7 +76,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-
             <ImageView
                 android:id="@+id/imgBack"
                 android:layout_width="0dp"
@@ -112,10 +111,11 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneBiceps"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="77dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="280dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="бицепс"
@@ -123,21 +123,39 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.15"
                 app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zonePlech"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/zonePlech"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="76dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:padding="4dp"
+                android:text="Плечевая мышца"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgFront"
+                app:layout_constraintWidth_percent="0.12" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneGrud"
                 android:layout_width="76dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="284dp"
-                android:layout_marginTop="96dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
-                android:text="Грудная"
+                android:text="Грудные мышцы"
                 android:textColor="#FFFFFF"
                 android:textSize="10sp"
                 android:textStyle="bold"
@@ -148,12 +166,14 @@
                 app:backgroundTint="@null"
                 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zonePress"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="63dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="96dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="28dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="Пресс"
@@ -161,34 +181,75 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
+                app:backgroundTint="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneDeltaFront"
-                app:layout_constraintWidth_percent="0.12"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintWidth_percent="0.12" />
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/zoneQuadriceps"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="86dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="264dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:padding="4dp"
+                android:text="Квадрицепс"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zoneKosaya"
+                app:layout_constraintWidth_percent="0.12" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/zonePramayaZhivota"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="76dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:padding="4dp"
+                android:text="Прямая мышца"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="@null"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zonePress"
+                app:layout_constraintWidth_percent="0.12" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneKosaya"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="136dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="236dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="Наружная косая"
                 android:textColor="#FFFFFF"
                 android:textSize="10sp"
                 android:textStyle="bold"
+
                 android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:backgroundTint="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneGrud"
-                app:layout_constraintWidth_percent="0.18"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintWidth_percent="0.18" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zone4gol"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="122dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="16dp"
@@ -199,13 +260,11 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="visible"
+                app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/zonePress"
-                app:layout_constraintVertical_bias="0.524"
-                app:layout_constraintWidth_percent="0.18"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintTop_toBottomOf="@+id/zonePramayaZhivota"
+                app:layout_constraintWidth_percent="0.18" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneTrapezius"
@@ -245,6 +304,26 @@
                 app:backgroundTint="@null"
                 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/zoneJagodichnyeIkronozhn"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="76dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/muscle_zone_selector"
+                android:padding="4dp"
+                android:text="Ягодичная икроножная"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zoneJagodichnye"
+                app:layout_constraintWidth_percent="0.12" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneTriceps"
                 android:layout_width="97dp"
@@ -266,10 +345,11 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneJagodichnye"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="122dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="136dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="Ягодичные"
@@ -277,18 +357,18 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
+                app:backgroundTint="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneTrapezius"
-                app:layout_constraintWidth_percent="0.18"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintWidth_percent="0.18" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneBricepsBedra"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="120dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="256dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="52dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="Бицепс бедра"
@@ -296,14 +376,14 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
+                app:backgroundTint="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneTriceps"
-                app:layout_constraintWidth_percent="0.18"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintWidth_percent="0.18" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zone4glav"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="137dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="4dp"
@@ -314,19 +394,19 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
+                app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/zoneJagodichnye"
+                app:layout_constraintTop_toBottomOf="@+id/zoneJagodichnyeIkronozhn"
                 app:layout_constraintVertical_bias="0.575"
-                app:layout_constraintWidth_percent="0.18"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintWidth_percent="0.18" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zoneIkry"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="81dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="268dp"
+                android:layout_marginStart="264dp"
                 android:background="@drawable/muscle_zone_selector"
                 android:padding="4dp"
                 android:text="Икры"
@@ -334,13 +414,12 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:visibility="gone"
+                app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/zoneBricepsBedra"
-                app:layout_constraintVertical_bias="0.43"
-                app:layout_constraintWidth_percent="0.12"
-                app:backgroundTint="@null"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                app:layout_constraintVertical_bias="0.65"
+                app:layout_constraintWidth_percent="0.12" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
