@@ -72,6 +72,9 @@ public class ActivityMuscle extends CreateActivity {
         setupZoneButton(R.id.zonePress);
         setupZoneButton(R.id.zoneKosaya);
         setupZoneButton(R.id.zone4gol);
+        setupZoneButton(R.id.zonePramayaZhivota);
+        setupZoneButton(R.id.zoneQuadriceps);
+        setupZoneButton(R.id.zonePlech);
 
         // Кнопки для задней части (стр. 2)
         setupZoneButton(R.id.zoneTrapezius);
@@ -81,6 +84,9 @@ public class ActivityMuscle extends CreateActivity {
         setupZoneButton(R.id.zone4glav);
         setupZoneButton(R.id.zoneBricepsBedra);
         setupZoneButton(R.id.zoneIkry);
+        setupZoneButton(R.id.zoneJagodichnyeIkronozhn);
+
+
     }
 
     private void setupZoneButton(int buttonId) {
@@ -135,6 +141,9 @@ public class ActivityMuscle extends CreateActivity {
         findViewById(R.id.zonePress).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneKosaya).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zone4gol).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
+        findViewById(R.id.zonePramayaZhivota).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
+        findViewById(R.id.zoneQuadriceps).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
+        findViewById(R.id.zonePlech).setVisibility(page == 1 ? View.VISIBLE : View.GONE);
 
         // Зоны ЗАДНЕЙ части
         findViewById(R.id.zoneTrapezius).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
@@ -144,5 +153,6 @@ public class ActivityMuscle extends CreateActivity {
         findViewById(R.id.zone4glav).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneBricepsBedra).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneIkry).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
+        findViewById(R.id.zoneJagodichnyeIkronozhn).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
     }
 }
