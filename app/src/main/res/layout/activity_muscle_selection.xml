@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <!-- Изображения (без изменений) -->
+
                 <ImageView
                     android:id="@+id/imgFront"
                     android:layout_width="0dp"
@@ -73,7 +73,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- ================= ЛЕВАЯ КОЛОНКА ================= -->
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/zoneDeltaFront"
@@ -125,7 +124,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/zonePress"
                     app:layout_constraintWidth_percent="0.22" />
 
-                <!-- ================= ПРАВАЯ КОЛОНКА ================= -->
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/zonePlech"
@@ -201,7 +199,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/zoneKosaya"
                     app:layout_constraintWidth_percent="0.22" />
 
-                <!-- ================= СКРЫТЫЕ КНОПКИ (Задняя сторона) ================= -->
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/zoneTrapezius"
@@ -334,14 +331,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="12dp"
         android:gravity="center"
         android:background="?attr/SubBackground">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
             style="@style/buttonBack"/>
@@ -349,7 +346,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:text="Сохранить"

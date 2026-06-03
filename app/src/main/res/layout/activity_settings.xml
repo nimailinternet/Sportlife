@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+
         android:gravity="center"
         android:background="#3F3F3F">
 
@@ -39,8 +39,7 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="24dp"
-        android:background="#333333">
+        android:padding="24dp">
 
 
         <TextView
@@ -71,13 +70,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="12dp"
         android:gravity="center"
         android:background="#3F3F3F">
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:text="Назад"
             android:textColor="#FFFFFF"
             android:textSize="14dp"

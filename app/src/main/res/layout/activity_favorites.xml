@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:gravity="center"
         android:background="#3F3F3F">
 
@@ -50,34 +49,34 @@
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:background="#333333"/>
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="16dp"
-        android:background="#333333">
+        android:layout_marginBottom="16dp"
+        >
 
         <ImageView
             android:id="@+id/btnPrev"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_previous"
             android:contentDescription="Previous"
             />
 
         <TextView
             android:id="@+id/tvPageNumber"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/page"/>
 
         <ImageView
             android:id="@+id/btnNext"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
             android:contentDescription="Next"/>
     </LinearLayout>
@@ -87,13 +86,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="16dp"
-        android:background="#333333">
+        android:padding="12dp"
+        android:background="#3F3F3F">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             style="@style/buttonBack"/>
     </LinearLayout>
 </LinearLayout>
