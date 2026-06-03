@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+
         android:gravity="center"
         android:background="#3F3F3F">
 
@@ -34,8 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp"
-            android:background="#333333">
+            android:padding="8dp">
 
             <FrameLayout
                 android:layout_width="150dp"
@@ -77,7 +76,7 @@
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:tag="login"
                     style="@style/EditName"
                     android:clickable="true"
@@ -109,7 +108,7 @@
                 android:id="@+id/tvExpertise"
                 android:tag="experts"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 style="@style/EditName"
                 android:text="None"
                 android:gravity="center_vertical"
@@ -128,7 +127,7 @@
                 android:id="@+id/tvActivity"
                 android:tag="activity"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 style="@style/EditName"
                 android:text="00"
                 android:gravity="center_vertical"
@@ -147,7 +146,7 @@
                 android:id="@+id/tvRating"
                 android:tag="top"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
 
                 style="@style/EditName"
                 android:text="00"
@@ -164,14 +163,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="12dp"
         android:gravity="center"
         android:background="#3F3F3F">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
             style="@style/buttonBack"/>
@@ -179,7 +178,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:text="Расписание"

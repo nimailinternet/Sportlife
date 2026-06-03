@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="249dp"
+        android:layout_height="wrap_content"
         android:background="#333333"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_marginBottom="25dp"
+
             android:text="Смена имени"
             android:textAlignment="center"
             style="@style/secondTitle"/>
@@ -31,7 +31,7 @@
         <EditText
             android:id="@+id/tvName"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
@@ -56,21 +56,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:orientation="horizontal">
 
 
             <Button
                 android:id="@+id/btnNo"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 style="@style/buttonBack"/>
 
             <Button
                 android:id="@+id/btnYes"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1"
