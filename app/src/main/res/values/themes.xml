@@ -5,7 +5,7 @@
             <item name="SelectedBlue">@color/bluePrimaryDark</item>
             <item name="MainBackground">@color/gray900</item>
             <item name="TextColor">@color/white</item>
-            <item name="LevelBackground">@color/white</item>
+            <item name="Background">@color/white</item>
             <item name="secondText">@color/gray050</item>
             <item name="CardBackground">@color/gray025</item>
             <item name="SubNavigationColor">@color/gray200</item>

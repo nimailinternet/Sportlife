@@ -6,7 +6,7 @@
                 android:width="3dp"
                 android:color="?attr/StrokeMuscle"/>
             <corners android:radius="@dimen/ViewRadius"/>
-            <solid android:color="@color/TransparentBlue"/>
+            <solid android:color="?attr/SelectedMuscle"/>
         </shape>
     </item>
     <item>
@@ -15,7 +15,7 @@
                 android:width="3dp"
                 android:color="?attr/StrokeMuscle"/>
             <corners android:radius="@dimen/ViewRadius"/>
-            <solid android:color="@color/Transparent"/>
+            <solid android:color="?attr/BaseMuscle"/>
         </shape>
     </item>
 </selector>
