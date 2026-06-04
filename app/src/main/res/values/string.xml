@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ==================== НАЗВАНИЕ ПРИЛОЖЕНИЯ ==================== -->
+    <string name="app_name_part1">Sport-</string>
+    <string name="app_name_part2">life</string>
+
+    <!-- ==================== АВТОРИЗАЦИЯ ==================== -->
+    <string name="label_login">Вход</string>
+    <string name="label_registration">Регистрация</string>
+    <string name="btn_no_account">Нет аккаунта?</string>
+    <string name="btn_have_account">Есть аккаунт?</string>
+
+    <!-- Подсказки полей -->
+    <string name="hint_name">Имя:</string>
+    <string name="hint_password">Пароль:</string>
+
+    <!-- ==================== ЭКРАН ТОП-10 ==================== -->
+    <string name="title_top_10">Топ 10</string>
+    <string name="welcome">Добро пожаловать</string>
+
+    <!-- ==================== ЭКРАН УРОВНЯ (ПОДГОТОВКА) ==================== -->
+    <string name="title_search_preparation">Поиск: подготовка</string>
+    <string name="question_evaluate_yourself">Как вы себя оцениваете?</string>
+    <string name="level_novice">новичок</string>
+    <string name="level_experienced">опытный</string>
+    <string name="level_pro">профи</string>
+
+    <!-- ==================== ЭКРАН МЫШЦ ==================== -->
+    <string name="title_search_muscles">Поиск: выбор мышц</string>
+
+    <!-- Названия мышц -->
+    <string name="muscle_deltas">дельты</string>
+    <string name="muscle_cardio">кардио</string>
+    <string name="muscle_press">пресс</string>
+    <string name="muscle_rectus_abdominis">прямая мышца</string>
+    <string name="muscle_brachialis_muscle">плечевая мышца</string>
+    <string name="muscle_biceps">бицепс</string>
+    <string name="muscle_brachialis">брахиалис</string>
+    <string name="muscle_chest">грудные мышцы</string>
+    <string name="muscle_oblique_external">наружная косая</string>
+    <string name="muscle_quadriceps">квадрицепс</string>
+    <string name="muscle_trapezius">трапеция</string>
+    <string name="muscle_lats">широчайшие</string>
+    <string name="muscle_quadriceps_femoris">четырёхглавая</string>
+    <string name="muscle_triceps">трицепс</string>
+    <string name="muscle_hamstrings">бицепс бедра</string>
+    <string name="muscle_calves">икры</string>
+
+    <!-- ==================== ЭКРАН ИНВЕНТАРЯ ==================== -->
+    <string name="title_search_equipment">Поиск: инвентарь</string>
+
+    <!-- ==================== ЭКРАН РЕЗУЛЬТАТА ==================== -->
+    <string name="title_search_result">Поиск: результат</string>
+
+    <!-- ==================== ЭКРАН ДЕТАЛЕЙ УПРАЖНЕНИЯ ==================== -->
+    <string name="tab_technique">Техника</string>
+    <string name="tab_video">Видео</string>
+    <string name="tab_equipment">Инвентарь</string>
+    <string name="tab_muscle_groups">Группы мышц</string>
+
+    <!-- ==================== НАСТРОЙКИ ==================== -->
+    <string name="question_change_theme">Вы хотите сменить тему?</string>
+    <string name="btn_change">Сменить</string>
+
+    <!-- ==================== РАСПИСАНИЕ ==================== -->
+    <string name="title_schedule">Расписание</string>
+    <string name="subtitle_choose_days">Выберите дни тренировок</string>
+
+    <!-- Дни недели -->
+    <string name="day_monday">Понедельник</string>
+    <string name="day_tuesday">Вторник</string>
+    <string name="day_wednesday">Среда</string>
+    <string name="day_thursday">Четверг</string>
+    <string name="day_friday">Пятница</string>
+    <string name="day_saturday">Суббота</string>
+    <string name="day_sunday">Воскресенье</string>
+
+    <!-- ==================== ПРОФИЛЬ ==================== -->
+    <string name="label_profile_name">Имя</string>
+    <string name="label_profile_expertise">Экспертность</string>
+    <string name="label_profile_activity">Активность</string>
+    <string name="label_profile_rating">Мой рейтинг</string>
+
+    <!-- ==================== ДИАЛОГИ ИЗМЕНЕНИЯ ==================== -->
+    <string name="title_change_avatar">Смена аватара</string>
+    <string name="title_choose_time">Выберите время</string>
+    <string name="title_change_name">Смена имени</string>
+
+    <!-- ==================== ЗНАЧЕНИЯ ПО УМОЛЧАНИЮ ==================== -->
+    <string name="default_name">Name</string>
+    <string name="default_expertise">None</string>
+    <string name="default_activity">00</string>
+    <string name="default_rating">0</string>
+
+    <!-- ==================== КНОПКИ НАВИГАЦИИ ==================== -->
+    <string name="btn_back">Назад</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_schedule">Расписание</string>
+    <string name="btn_search">Поиск</string>
+    <string name="btn_favorite">Избранное</string>
+
+</resources>
