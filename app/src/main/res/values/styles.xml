@@ -45,7 +45,7 @@
     </style>
     <style name="buttonMain" parent="Widget.AppCompat.Button">
         <item name="android:textColor">?attr/TextColor</item>
-        <item name="android:background">@drawable/button_green_rounded</item>
+        <item name="android:buttonCornerRadius">@dimen/ViewRadius</item>
         <item name="backgroundTint">?attr/mainBlue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">@dimen/padding</item>
@@ -87,7 +87,7 @@
         <item name="android:textSize">@dimen/levelText</item>
         <item name="android:textColor">?attr/HintColor</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">@dimen/padding</item>
         <item name="android:backgroundTint">@null</item>
         <item name="android:background">@drawable/level_button_selector</item>
     </style>
@@ -111,14 +111,13 @@
     <style name="page">
         <item name="android:textColor">?attr/TextColor</item>
         <item name="android:text">1</item>
-        <item name="android:gravity">center</item>
     </style>
     <style name="cardView">
         <item name="android:background">@drawable/level_button_selector</item>
         <item name="cardCornerRadius">@dimen/CardRadius</item>
-        <item name="android:textColor">?attr/CardBackground</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginVertical">@dimen/margin</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
     </style>
     <style name="exerciseText">
         <item name="android:textSize">@dimen/Text</item>

@@ -41,25 +41,22 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnNovice"
                 style="@style/levelButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-
-
-
                 android:text="новичок"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/btnExperienced"
                 app:layout_constraintStart_toStartOf="parent"
@@ -70,14 +67,11 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnExperienced"
                 style="@style/levelButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-
-
-
                 android:text="опытный"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
                 app:layout_constraintTop_toBottomOf="@+id/btnNovice"
                 app:layout_constraintBottom_toTopOf="@+id/btnPro"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,12 +81,10 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnPro"
                 style="@style/levelButton"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-
-
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
                 android:text="профи"
                 app:layout_constraintTop_toBottomOf="@+id/btnExperienced"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -105,24 +97,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:background="?attr/SubBackground">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="@dimen/margin"
             style="@style/buttonBack"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_weight="1"
             android:text="Сохранить"
+            android:layout_marginRight="@dimen/margin"
             style="@style/ButtonNavigation"/>
 
     </LinearLayout>

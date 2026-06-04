@@ -4,46 +4,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#333333"
+    android:background="?attr/MainBackground"
     android:id="@+id/activityEquipment">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="#3F3F3F">
-
+        android:background="?attr/SubBackground">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/nameAppLeft"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/nameAppRight"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/secondTitle"
+        android:id="@+id/inventory"
+        android:text="Поиск: инвентарь" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/secondTitle"
-            android:id="@+id/inventory"
-
-            android:text="Поиск: инвентарь" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:id="@+id/recyclerInventory"
-
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"/>
 
     </LinearLayout>
 
@@ -51,10 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-
-        android:layout_marginBottom="16dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/btnPrev"
@@ -68,7 +58,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/page"/>
-
         <ImageView
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
@@ -80,23 +69,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3F3F3F"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:background="?attr/SubBackground"
+        android:padding="@dimen/padding">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/margin"
             android:layout_weight="1"
             style="@style/buttonBack"/>
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/margin"
             android:layout_weight="1"
             android:text="Сохранить"
             style="@style/ButtonNavigation"/>

@@ -5,7 +5,7 @@
         <attr name="SelectedBlue" format="color"/>
         <attr name="MainBackground" format="color"/>
         <attr name="TextColor" format="color"/>
-        <attr name="LevelBackground" format="color"/>
+        <attr name="Background" format="color"/>
         <attr name="secondText" format="color"/>
         <attr name="CardBackground" format="color"/>
         <attr name="SubNavigationColor" format="color"/>
