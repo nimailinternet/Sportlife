@@ -15,7 +15,7 @@ import com.example.sportlife.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityProfile extends CreateActivity {
+public class ActivityProfile extends ActivityCreate {
 
 
 

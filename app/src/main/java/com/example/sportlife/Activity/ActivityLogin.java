@@ -1,19 +1,11 @@
 package com.example.sportlife.Activity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
-import com.example.sportlife.AndroidBackGround.Client.RetrofitClient;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
@@ -24,9 +16,7 @@ import com.example.sportlife.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.RequiredArgsConstructor;
-
-public class ActivityLogin extends CreateActivity {
+public class ActivityLogin extends ActivityCreate {
     @Override
     protected int getIdLayout(){
         return R.layout.activity_login;
@@ -54,7 +44,7 @@ public class ActivityLogin extends CreateActivity {
         registrationService=new RegistrationService();
         tv_have_account = findViewById(R.id.tv_have_account);
         tv_have_account.setOnClickListener(v-> {
-            callBack.onSuccess(MainActivity.class);
+            callBack.onSuccess(ActivityMain.class);
         });
         appCompatButton.setOnClickListener(v->registrationService.registration(editTextName.getText().toString(),editTextPassword.getText().toString(),callBack));
 

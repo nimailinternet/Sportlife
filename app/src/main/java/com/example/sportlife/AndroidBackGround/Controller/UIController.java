@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.sportlife.Activity.ActivityEditAvatar;
-import com.example.sportlife.Activity.ActivityExerciseDetail;
+import com.example.sportlife.Activity.ActivityResultDetail;
 import com.example.sportlife.Activity.ActivityFavouriteDetails;
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
 import com.example.sportlife.AndroidBackGround.Dto.Response.FindAvatarResponse;
@@ -186,8 +186,8 @@ public  class UIController {
                 }
                 });
                view.setOnClickListener(v->{
-                   if(to== ActivityExerciseDetail.class){
-                       ActivityExerciseDetail.setNameExercise(name.getText().toString());
+                   if(to== ActivityResultDetail.class){
+                       ActivityResultDetail.setNameExercise(name.getText().toString());
                    }else{
                        ActivityFavouriteDetails.setNameExercise(name.getText().toString());
                    }
@@ -304,7 +304,7 @@ public  class UIController {
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View view = dialog.getLayoutInflater()
-                        .inflate(R.layout.avatar_item, parent, false);
+                        .inflate(R.layout.item_avatar, parent, false);
                 return new RecyclerView.ViewHolder(view){};
             }
 

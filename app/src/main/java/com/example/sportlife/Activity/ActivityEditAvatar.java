@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
-import com.example.sportlife.AndroidBackGround.Security.SessionManager;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.ProfileService;
@@ -19,7 +18,7 @@ import java.util.List;
 
 import lombok.Setter;
 
-public class ActivityEditAvatar extends CreateActivity{
+public class ActivityEditAvatar extends ActivityCreate {
     @Setter
     public static String nameAvatar;
     @Override

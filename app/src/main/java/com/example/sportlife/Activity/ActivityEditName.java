@@ -18,7 +18,7 @@ import com.example.sportlife.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityEditName extends CreateActivity{
+public class ActivityEditName extends ActivityCreate {
     @Override
     protected int getIdLayout() {
         return R.layout.edit_dialog;

@@ -16,7 +16,7 @@ import java.util.List;
 
 import lombok.Setter;
 
-public class ActivityFavouriteDetails extends CreateActivity{
+public class ActivityFavouriteDetails extends ActivityCreate {
     @Setter
     public static String nameExercise;
     @Override

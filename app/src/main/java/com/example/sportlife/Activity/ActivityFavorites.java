@@ -3,26 +3,20 @@ package com.example.sportlife.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.sportlife.Activity.CreateActivity;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FavouritesService;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FindTopService;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.SearchService;
 import com.example.sportlife.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityFavorites extends CreateActivity {
+public class ActivityFavorites extends ActivityCreate {
 
     @Override
     protected int getIdLayout() {

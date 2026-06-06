@@ -4,25 +4,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.OnApplyWindowInsetsListener;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FindTopService;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.UpdateExpertsService;
 import com.example.sportlife.R;
-import org.jspecify.annotations.NonNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityLevel extends CreateActivity {
+public class ActivityLevel extends ActivityCreate {
     private String experts;
     private Button btnNovice, btnExperienced, btnPro;
 

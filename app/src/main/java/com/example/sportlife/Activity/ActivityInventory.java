@@ -1,8 +1,6 @@
 package com.example.sportlife.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +16,7 @@ import com.example.sportlife.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class ActivityInventory extends CreateActivity {
+public  class ActivityInventory extends ActivityCreate {
     int numberPage=0;
     @Override
     protected int getIdLayout() {
