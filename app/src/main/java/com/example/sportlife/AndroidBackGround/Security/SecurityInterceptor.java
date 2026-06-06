@@ -4,22 +4,10 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.versionedparcelable.NonParcelField;
-
-import com.example.sportlife.Activity.MainActivity;
-import com.example.sportlife.AndroidBackGround.Client.ApiRepository;
-import com.example.sportlife.AndroidBackGround.Client.RetrofitClient;
-import com.example.sportlife.AndroidBackGround.Client.SessionContext;
-import com.example.sportlife.AndroidBackGround.Controller.UIController;
-import com.example.sportlife.AndroidBackGround.Dto.Request.RefreshRequest;
-import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.RefreshService;
 
 import java.io.IOException;
 
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import okhttp3.Call;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;

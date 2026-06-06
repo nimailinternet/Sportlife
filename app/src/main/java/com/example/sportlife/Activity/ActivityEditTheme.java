@@ -3,9 +3,6 @@ package com.example.sportlife.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.annotation.UiContext;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Security.SessionManager;
@@ -13,7 +10,7 @@ import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.R;
 
-public class ActivityEditTheme extends CreateActivity{
+public class ActivityEditTheme extends ActivityCreate {
     @Override
     protected int getIdLayout() {
         return R.layout.activity_settings;

@@ -1,6 +1,5 @@
 package com.example.sportlife.Activity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,7 +13,7 @@ import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FindTopService;
 import com.example.sportlife.R;
 
-public class ActivityHome extends CreateActivity {
+public class ActivityHome extends ActivityCreate {
     @Override
     protected int getIdLayout() {
         return R.layout.activity_top;

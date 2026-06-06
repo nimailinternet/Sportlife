@@ -1,8 +1,6 @@
 package com.example.sportlife.Activity;
 
 import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
@@ -13,12 +11,12 @@ import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.SearchService
 import com.example.sportlife.R;
 import lombok.Setter;
 
-public class ActivityExerciseDetail extends CreateActivity {
+public class ActivityResultDetail extends ActivityCreate {
     @Setter
     public static String nameExercise;
     @Override
     protected int getIdLayout() {
-        return R.layout.activity_exercise_detail;
+        return R.layout.activity_result_detail;
     }
 
     @Override

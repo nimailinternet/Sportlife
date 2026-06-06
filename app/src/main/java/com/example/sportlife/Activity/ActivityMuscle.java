@@ -10,16 +10,13 @@ import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandler;
 import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
-import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.FindTopService;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.SearchService;
 import com.example.sportlife.R;
-
-import org.jspecify.annotations.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityMuscle extends CreateActivity {
+public class ActivityMuscle extends ActivityCreate {
     int currentPage = 1;
     List<String> muscles=new ArrayList<>();
 

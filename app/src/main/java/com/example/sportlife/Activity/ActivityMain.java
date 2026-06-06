@@ -16,7 +16,7 @@ import com.example.sportlife.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends CreateActivity {
+public class ActivityMain extends ActivityCreate {
     @Override
     protected int getIdLayout() {
         return R.layout.activity_main;

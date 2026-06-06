@@ -11,7 +11,7 @@ import com.example.sportlife.AndroidBackGround.Service.CallBackHandlerImpl;
 import com.example.sportlife.AndroidBackGround.Service.ServiceImpl.SplashService;
 import com.example.sportlife.R;
 
-public class SplashActivity extends CreateActivity {
+public class ActivitySpalsh extends ActivityCreate {
 
     @Override
     protected int getIdLayout() {
@@ -39,7 +39,7 @@ public class SplashActivity extends CreateActivity {
         findViewById(R.id.android_splash).postDelayed(() -> {
             if(session.getAccessToken()==null||session.getRefreshToken()==null){
                 service.splash(callBack);
-                callBack.onSuccess(MainActivity.class);
+                callBack.onSuccess(ActivityMain.class);
             }else{
                 service.splash(callBack);
                 callBack.onSuccess(ActivityHome.class);

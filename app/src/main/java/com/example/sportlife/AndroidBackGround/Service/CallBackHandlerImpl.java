@@ -3,9 +3,9 @@ package com.example.sportlife.AndroidBackGround.Service;
 import android.app.Activity;
 import android.app.AlertDialog;
 
-import com.example.sportlife.Activity.ActivityExerciseDetail;
+import com.example.sportlife.Activity.ActivityResultDetail;
 import com.example.sportlife.Activity.ActivityFavouriteDetails;
-import com.example.sportlife.Activity.MainActivity;
+import com.example.sportlife.Activity.ActivityMain;
 import com.example.sportlife.AndroidBackGround.Controller.ErrorController;
 import com.example.sportlife.AndroidBackGround.Controller.UIController;
 import com.example.sportlife.AndroidBackGround.Dto.Response.ErrorResponse;
@@ -52,7 +52,7 @@ public class CallBackHandlerImpl implements CallBackHandler {
 
     @Override
     public void findExercises(ExerciseCardResponse response) {
-        uiController.findExercises(response,this, ActivityExerciseDetail.class);
+        uiController.findExercises(response,this, ActivityResultDetail.class);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class CallBackHandlerImpl implements CallBackHandler {
 
     @Override
     public void onUnAuth() {
-        uiController.openNextScreen(MainActivity.class);
+        uiController.openNextScreen(ActivityMain.class);
     }
 
     @Override
