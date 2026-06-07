@@ -87,6 +87,7 @@ public class ActivityMuscle extends ActivityCreate {
         setupZoneButton(R.id.zoneBricepsBedra);
         setupZoneButton(R.id.zoneIkry);
         setupZoneButton(R.id.zoneShiro);
+        setupZoneButton(R.id.zoneGastrocnemius);
 
 
 
@@ -149,5 +150,6 @@ public class ActivityMuscle extends ActivityCreate {
         findViewById(R.id.zoneBricepsBedra).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneIkry).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
         findViewById(R.id.zoneShiro).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
+        findViewById(R.id.zoneGastrocnemius).setVisibility(page == 2 ? View.VISIBLE : View.GONE);
     }
 }
