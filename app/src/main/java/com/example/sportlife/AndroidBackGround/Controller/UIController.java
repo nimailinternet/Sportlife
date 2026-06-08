@@ -50,7 +50,6 @@ import lombok.NoArgsConstructor;
 public  class UIController {
     private  Activity activity;
     private  List<TextView> editTexts;
-
     public void openNextScreen(Class<? extends Activity> to){
         Intent intent=new Intent(activity, to);
         activity.startActivity(intent);
@@ -64,26 +63,9 @@ public  class UIController {
             }
         });
     }
-    public void errorService(String message){
-        int resId = 0;
-        if(message.startsWith("Too many follow-up request")){
-             resId = activity.getResources().getIdentifier(
-                    "1",
-                    "string",
-                    activity.getPackageName()
-            );
-            message=activity.getString(resId);
-        }else if(message.startsWith("Failed to connect to")){
-            resId = activity.getResources().getIdentifier(
-                    "2",
-                    "string",
-                    activity.getPackageName()
-            );
-            message=activity.getString(resId);
-        }else{
-            Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
-            return;
-        }
+    public void errorService(String message) throws IOException {
+        SessionManager session=new SessionManager(activity);
+        message=TranslateClient.translateString(message,"Error",session.getLanguage());
         Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
     }
     public void findTop(FindTopResponse response){
