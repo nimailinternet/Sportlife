@@ -39,7 +39,7 @@ public class CallBackHandlerImpl implements CallBackHandler {
     }
 
     @Override
-    public void onTools(String t) {
+    public void onTools(String t) throws IOException {
         uiController.errorService(t);
     }
 

@@ -16,7 +16,7 @@ import retrofit2.Response;
 public interface CallBackHandler {
     void onSuccess(Class<? extends Activity> activity);
     void onError(Response<?> response);
-    void onTools(String t);
+    void onTools(String t) throws IOException;
     void findTop(FindTopResponse response);
     void findInventory(FindInventoryResponse response);
     void findExercises(ExerciseCardResponse response);
