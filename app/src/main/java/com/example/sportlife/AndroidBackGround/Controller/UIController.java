@@ -68,14 +68,14 @@ public  class UIController {
         int resId = 0;
         if(message.startsWith("Too many follow-up request")){
              resId = activity.getResources().getIdentifier(
-                    "error_xm",
+                    "1",
                     "string",
                     activity.getPackageName()
             );
             message=activity.getString(resId);
         }else if(message.startsWith("Failed to connect to")){
             resId = activity.getResources().getIdentifier(
-                    "error_conection",
+                    "2",
                     "string",
                     activity.getPackageName()
             );

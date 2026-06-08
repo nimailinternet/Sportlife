@@ -56,7 +56,7 @@ public class SearchService {
     }
     public static Boolean setMuscles(List<String> muscles, CallBackHandler callBack){
         if(muscles.isEmpty()){
-            callBack.onTools("none_musсle");
+            callBack.onTools("3");
             return false;
         }else {
             SearchService.muscles = muscles;
@@ -65,7 +65,7 @@ public class SearchService {
     }
     public static Boolean setItems(List<String> items, CallBackHandler callBack){
         if(items.isEmpty()){
-            callBack.onTools("none_equipment");
+            callBack.onTools("4");
             return false;
         }else {
             return true;
@@ -75,7 +75,7 @@ public class SearchService {
         ExerciseCardResponse.Exercise exercise=exercises.stream().filter(e->
                e.getId().equals(id)).findFirst().orElse(null);
         if(exercise==null){
-            callBack.onTools("none_object");
+            callBack.onTools("5");
         }else{
             callBack.findExercise(exercise);
         }
