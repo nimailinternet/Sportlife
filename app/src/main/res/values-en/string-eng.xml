@@ -88,10 +88,4 @@
     <string name="swt_lang">English</string>
 
 
-    <string name="error_xm">hmmm, something is wrong, please try again</string>
-    <string name="error_conection">network error check network</string>
-    <string name="none_musсle">Select at least one muscle</string>
-    <string name="none_equipment">Select at least one inventory</string>
-    <string name="none_object">Object not found</string>
-
 </resources>
